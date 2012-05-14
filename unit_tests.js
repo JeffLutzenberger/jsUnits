@@ -2,67 +2,67 @@
  * ===== Unit System Unit Tests =====
  */ 
 //matches 4.4 " or 4.4 inches or 4.4 in
-var Units = new jsUnits();
+//var Units = new jsUnits();
 
 function matchInchesOnly(s)
 { 
-    var bValid = s.match( Units.inchesRegEx );
+    var bValid = s.match( jsUnits.inchesRegEx );
     return bValid;
 }
 
 //matches 1/4 " or 1/4 inches or 1/4 in
 function matchInchFractionOnly(s)
 {
-    var bValid = s.match( Units.inchFracRegEx );
+    var bValid = s.match( jsUnits.inchFracRegEx );
     return bValid;
 }
 
 // matches 4.4 ' or 4.4 feet or 4 ft
 function matchFeetOnly(s)
 {
-    var bValid = s.match( Units.feetRegEx );
+    var bValid = s.match( jsUnits.feetRegEx );
     return bValid;
 }
 
 //matches 4' 4" or 4ft 4in or 4feet 4inches
 function matchFeetInches(s)
 {
-    var bValid = s.match( Units.feetInchesRegEx );
+    var bValid = s.match( jsUnits.feetInchesRegEx );
     return bValid;
 }
 
 //matches 4' 4 1/4" or 4ft 4 1/4in or 4feet 4 1/4inches
 function matchFeetInchesInchFraction(s)
 {
-    var bValid = s.match( Units.feetInchesInchFracRegEx );
+    var bValid = s.match( jsUnits.feetInchesInchFracRegEx );
     return bValid;
 }
 
 function matchInteger(s)
 {
-    var bValid = s.match( Units.integerRegEx );
+    var bValid = s.match( jsUnits.integerRegEx );
 }
 
 function matchDecimal(s)
 {
-    var bValid = s.match( Units.decimalRegEx );
+    var bValid = s.match( jsUnits.decimalRegEx );
 }
 
 function matchMeterOnly(s)
 {
-    var bValid = s.match( Units.meterRegEx );
+    var bValid = s.match( jsUnits.meterRegEx );
     return bValid;
 }
 
 function matchCentimeterOnly(s)
 {
-    var bValid = s.match( Units.centimeterRegEx );
+    var bValid = s.match( jsUnits.centimeterRegEx );
     return bValid;
 }
 
 function matchMillimeterOnly(s)
 {
-    var bValid = s.match( Units.millimeterRegEx );
+    var bValid = s.match( jsUnits.millimeterRegEx );
     return bValid;
 }
 
@@ -211,7 +211,7 @@ function testMatchCentimeters()
 
 function testParseLength()
 {
-    function test(s) { return "<p>"+s+": " + Units.ParseLength(s); }
+    function test(s) { return "<p>"+s+": " + jsUnits.ParseLength(s); }
     var htmlStr = $("#log-console").html();
     htmlStr += "<h2>Convert (Parse Length)</h2><p>--- Success ---</p>";
     //test feet and '
