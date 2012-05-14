@@ -7,9 +7,9 @@ Currently the Internal Unit System is English (lbs and inches).
 Example Usage (after including jsUnits.js):
 
   - Parse a length
-      jsUnits.ParseLength(s);
+      - jsUnits.ParseLength(s);
   - Match a length
-      var bValid = s.match( jsUnits.feetInchesRegEx );
+      - var bValid = s.match( jsUnits.feetInchesRegEx );
   - Parse a Pressure (force/area)
-      jsUnits.ParseForcePerArea(s); 
+      - jsUnits.ParseForcePerArea(s); 
 
